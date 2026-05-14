@@ -44,10 +44,21 @@
         input[type="reset"] { background-color: #f1f1f1; }
         input[type="reset"]:hover { background-color: #ddd; }
 
-        textarea { width: 100%; border: 1px solid #ccc; padding: 5px; }
+        textarea { 
+        width: 100%;            /* Formun genişliğine yayılır */
+        max-width: 100%;        /* %100'den daha fazla genişlemesini yasaklar (Taşmayı önler) */
+        box-sizing: border-box; /* Padding ve Border'ı kutunun içine hapseder */
+        border: 1px solid #ccc; 
+        padding: 10px;          /* İçine yazarken yazı kenara yapışmasın diye */
+        display: block;         /* Düzeni garantiler */
+        }
+
         select {
-        font-size: 16px; /* Yazıları biraz büyütür */
-        padding: 5px;    /* Kutunun içini ferahlatır */
+        width: 100%;            /* Kutunun diğerleriyle aynı genişlikte olması için */
+        max-width: 300px;       /* Ama çok da devasa olmasın dersen bu sınırı koyabilirsin */
+        font-size: 16px; 
+        padding: 5px;
+        box-sizing: border-box; /* Liste kutusu için de taşmayı önler */
         }
     </style>
 </head>
