@@ -6,7 +6,7 @@
     <style>
         body { font-family: Arial, sans-serif; padding: 30px; background-color: #f9f9f9; }
         
-        /* Formun dış kutusu */
+        
         form { 
             max-width: 700px; 
             margin: auto; 
@@ -26,10 +26,10 @@
         
         legend { font-weight: bold; padding: 0 10px; }
 
-        /* Butonları büyüttüğümüz kısım kanka */
+        
         input[type="submit"], input[type="reset"] {
-            padding: 15px 35px; /* Daha geniş ve yüksek */
-            font-size: 18px;    /* Yazı tipi daha büyük */
+            padding: 15px 35px;
+            font-size: 18px;   
             font-weight: bold;
             cursor: pointer;
             border-radius: 8px;
@@ -45,21 +45,21 @@
         input[type="reset"]:hover { background-color: #ddd; }
 
         textarea { 
-        width: 100%;            /* Formun genişliğine yayılır */
-        max-width: 100%;        /* %100'den daha fazla genişlemesini yasaklar (Taşmayı önler) */
-        box-sizing: border-box; /* Padding ve Border'ı kutunun içine hapseder */
+        width: 100%;            
+        max-width: 100%;      
+        box-sizing: border-box; 
         border: 1px solid #ccc; 
-        padding: 10px;          /* İçine yazarken yazı kenara yapışmasın diye */
-        display: block;         /* Düzeni garantiler */
+        padding: 10px;          
+        display: block;        
         font-size: 18px;    
         }
 
         select {
-        width: 100%;            /* Kutunun diğerleriyle aynı genişlikte olması için */
-        max-width: 300px;       /* Ama çok da devasa olmasın dersen bu sınırı koyabilirsin */
+        width: 100%;            
+        max-width: 300px;   
         font-size: 16px; 
         padding: 5px;
-        box-sizing: border-box; /* Liste kutusu için de taşmayı önler */
+        box-sizing: border-box;
         }
     </style>
 </head>
@@ -67,7 +67,7 @@
 
     <h1>Music Survey - HW9</h1>
 
-    <!-- Sunucu Bağlantısı -->
+   
     <form method="post" action="http://www.uyar.com/teaching/ecc006/2017spring/login.php">
         
         <div class="row">
@@ -98,7 +98,7 @@
             <input type="radio" name="p" id="r4" value="n"> <label style="display:inline" for="r4">Never purchase</label>
         </fieldset>
 
-        <!-- Liste Çeşitlendirildi (En az 4 öğe, 3'ü görünür) -->
+       
         <div class="row">
             <label for="loc">Select the locations you listen to Music:</label>
             <select name="location" id="loc" size="3" style="width: 260px;">
@@ -111,13 +111,12 @@
             </select>
         </div>
 
-        <!-- Scrolling Text Box (60x3) -->
+       
         <div class="row">
             <label for="comm">What role does music play in your life?</label>
             <textarea id="comm" name="comments" rows="3" cols="60"></textarea>
         </div>
 
-        <!-- Büyük Butonlar -->
         <div class="row">
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
