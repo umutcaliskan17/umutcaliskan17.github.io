@@ -1,73 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Burası hocanın istediği head kısmı kanka -->
     <meta charset="UTF-8">
-    <title>Music Survey Form - Homework 9</title>
+    <title>Music Survey - HW9</title>
     <style>
-        /* CSS'i buraya, yani head içine yazdık */
-        body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.5; }
-        form { max-width: 650px; border: 1px solid #333; padding: 20px; }
-        fieldset { margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; }
+        body { font-family: Arial, sans-serif; padding: 30px; background-color: #f9f9f9; }
+        
+        /* Formun dış kutusu */
+        form { 
+            max-width: 700px; 
+            margin: auto; 
+            background: white; 
+            border: 1px solid #ddd; 
+            padding: 25px; 
+            border-radius: 8px; 
+        }
+
+        h1 { border-bottom: 2px solid #333; padding-bottom: 10px; }
+
+        .row { margin-bottom: 20px; }
+        
+        label { font-weight: bold; display: block; margin-bottom: 5px; }
+
+        fieldset { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+        
         legend { font-weight: bold; padding: 0 10px; }
-        .row { margin-bottom: 15px; }
-        label { font-weight: bold; }
+
+        /* Butonları büyüttüğümüz kısım kanka */
+        input[type="submit"], input[type="reset"] {
+            padding: 15px 35px; /* Daha geniş ve yüksek */
+            font-size: 18px;    /* Yazı tipi daha büyük */
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            border: 1px solid #bbb;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        input[type="submit"] { background-color: #007bff; color: white; border: none; }
+        input[type="submit"]:hover { background-color: #0056b3; }
+
+        input[type="reset"] { background-color: #f1f1f1; }
+        input[type="reset"]:hover { background-color: #ddd; }
+
+        textarea { width: 100%; border: 1px solid #ccc; padding: 5px; }
     </style>
 </head>
 <body>
 
     <h1>Music Survey</h1>
 
-    <!-- Sunucu bağlantısını sağlayan ana form etiketi -->
+    <!-- Sunucu Bağlantısı -->
     <form method="post" action="http://www.uyar.com/teaching/ecc006/2017spring/login.php">
         
-        <!-- İsim kutusu (Text box) -->
         <div class="row">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="my_name">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="my_name" style="width: 250px; padding: 5px;">
         </div>
 
-        <!-- E-posta kutusu (Email address input) -->
         <div class="row">
-            <label for="email">E-Mail:</label><br>
-            <input type="email" id="email" name="my_email">
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="my_email" style="width: 250px; padding: 5px;">
         </div>
 
-        <!-- Checkbox grubu (Fieldset ve Legend kullanıldı) -->
         <fieldset>
             <legend>Select Your Favorite Types of Music:</legend>
-            <input type="checkbox" name="m1" id="c1"> <label for="c1">Pop</label><br>
-            <input type="checkbox" name="m2" id="c2"> <label for="c2">Classical</label><br>
-            <input type="checkbox" name="m3" id="c3"> <label for="c3">Rock</label><br>
-            <input type="checkbox" name="m4" id="c4"> <label for="c4">Other</label>
+            <input type="checkbox" name="m1" id="c1"> <label style="display:inline" for="c1">Pop</label><br>
+            <input type="checkbox" name="m2" id="c2"> <label style="display:inline" for="c2">Classical</label><br>
+            <input type="checkbox" name="m3" id="c3"> <label style="display:inline" for="c3">Rock</label><br>
+            <input type="checkbox" name="m4" id="c4"> <label style="display:inline" for="c4">Folk</label><br>
+            <input type="checkbox" name="m5" id="c5"> <label style="display:inline" for="c5">Rap</label><br>
+            <input type="checkbox" name="m6" id="c6"> <label style="display:inline" for="c6">Other</label>
         </fieldset>
 
-        <!-- Radio button grubu (En az 3 seçenek) -->
         <fieldset>
             <legend>Select how often you purchase Music CDs:</legend>
-            <input type="radio" name="p" id="r1" value="w"> <label for="r1">Weekly</label><br>
-            <input type="radio" name="p" id="r2" value="m"> <label for="r2">Monthly</label><br>
-            <input type="radio" name="p" id="r3" value="n"> <label for="r3">Never purchase</label>
+            <input type="radio" name="p" id="r1" value="w"> <label style="display:inline" for="r1">Weekly</label><br>
+            <input type="radio" name="p" id="r2" value="f"> <label style="display:inline" for="r2">A few CDs each year</label><br>
+            <input type="radio" name="p" id="r3" value="m"> <label style="display:inline" for="r3">Monthly</label><br>
+            <input type="radio" name="p" id="r4" value="n"> <label style="display:inline" for="r4">Never purchase</label>
         </fieldset>
 
-        <!-- Select box (3 tanesi görünüyor, içinde 4 seçenek var) -->
+        <!-- Liste Çeşitlendirildi (En az 4 öğe, 3'ü görünür) -->
         <div class="row">
-            <label for="loc">Select the locations you listen to Music:</label><br>
-            <select name="location" id="loc" size="3">
-                <option value="1">In the car</option>
-                <option value="2">Anywhere (MP3 Player)</option>
-                <option value="3">At work</option>
-                <option value="4">At home</option>
+            <label for="loc">Select the locations you listen to Music:</label>
+            <select name="location" id="loc" size="3" style="width: 260px;">
+                <option value="car">In the car</option>
+                <option value="gym">At the Gym / Outdoors</option>
+                <option value="office">At work / Office</option>
+                <option value="home">At home / Relaxing</option>
+                <option value="travel">During Travel (Bus/Plane)</option>
             </select>
         </div>
 
-        <!-- Metin kutusu (60 karakter genişlik, 3 satır yükseklik) -->
+        <!-- Scrolling Text Box (60x3) -->
         <div class="row">
-            <label for="comm">What role does music play in your life?</label><br>
+            <label for="comm">What role does music play in your life?</label>
             <textarea id="comm" name="comments" rows="3" cols="60"></textarea>
         </div>
 
-        <!-- Gönder ve Sıfırla butonları -->
+        <!-- Büyük Butonlar -->
         <div class="row">
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
