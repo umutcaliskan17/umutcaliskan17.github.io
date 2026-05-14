@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title> Survey</title>
     <style>
-       
         body { font-family: Arial, sans-serif; padding: 30px; background-color: #f9f9f9; }
         
         form { 
@@ -15,12 +14,10 @@
             padding: 25px; 
             border-radius: 8px; 
         }
-
         h1 { border-bottom: 2px solid #333; padding-bottom: 10px; }
         .row { margin-bottom: 20px; }
         label { font-weight: bold; display: block; margin-bottom: 5px; }
 
-        
         input[type="text"], 
         input[type="email"] {
             font-size: 18px; 
@@ -36,6 +33,12 @@
         legend { font-weight: bold; padding: 0 10px; }
 
      
+        
+        
+        
+        
+        
+        
         select {
             width: 100%;            
             max-width: 350px;   
@@ -44,6 +47,8 @@
             box-sizing: border-box;
         }
 
+        
+        
         
         textarea { 
             width: 100%;            
@@ -57,6 +62,9 @@
         }
 
         
+        
+        
+        
         input[type="submit"], input[type="reset"] {
             padding: 15px 35px;
             font-size: 18px;  
@@ -68,29 +76,42 @@
             transition: 0.3s;
         }
 
+        
+        
         input[type="submit"] { background-color: #007bff; color: white; border: none; }
         input[type="submit"]:hover { background-color: #0056b3; }
         input[type="reset"] { background-color: #f1f1f1; }
         input[type="reset"]:hover { background-color: #ddd; }
+    
     </style>
+
 </head>
 <body>
 
     <h1>Music Survey - HW9</h1>
 
+    
+    
+    
     <form method="post" action="http://www.uyar.com/teaching/ecc006/2017spring/login.php">
+        
+        
         
         <div class="row">
             <label for="name">Name:</label>
             <input type="text" id="name" name="my_name">
         </div>
 
+        
+        
         <div class="row">
             <label for="email">E-Mail:</label>
             <input type="email" id="email" name="my_email">
         </div>
 
-        <fieldset>
+        
+        
+        fieldset>
             <legend>Select Your Favorite Types of Music:</legend>
             <input type="checkbox" name="m1" id="c1"> <label style="display:inline" for="c1">Pop</label><br>
             <input type="checkbox" name="m2" id="c2"> <label style="display:inline" for="c2">Classical</label><br>
@@ -100,6 +121,8 @@
             <input type="checkbox" name="m6" id="c6"> <label style="display:inline" for="c6">Other</label>
         </fieldset>
 
+        
+        
         <fieldset>
             <legend>Select how often you purchase Music CDs:</legend>
             <input type="radio" name="p" id="r1" value="w"> <label style="display:inline" for="r1">Weekly</label><br>
@@ -108,6 +131,8 @@
             <input type="radio" name="p" id="r4" value="n"> <label style="display:inline" for="r4">Never purchase</label>
         </fieldset>
 
+        
+        
         <div class="row">
             <label for="loc">Select the locations you listen to Music:</label>
             <select name="location" id="loc" size="3">
@@ -120,11 +145,15 @@
             </select>
         </div>
 
+        
+        
         <div class="row">
             <label for="comm">What role does music play in your life?</label>
             <textarea id="comm" name="comments" rows="3" cols="60"></textarea>
         </div>
 
+        
+        
         <div class="row">
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
@@ -132,6 +161,9 @@
 
     </form>
 
+    
+    
+    
     <p><a href="index.html">← Back to Home</a></p>
 
 </body>
