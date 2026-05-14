@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Burası hocanın istediği head kısmı kanka -->
+    <meta charset="UTF-8">
+    <title>Music Survey Form - Homework 9</title>
+    <style>
+        /* CSS'i buraya, yani head içine yazdık */
+        body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.5; }
+        form { max-width: 650px; border: 1px solid #333; padding: 20px; }
+        fieldset { margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; }
+        legend { font-weight: bold; padding: 0 10px; }
+        .row { margin-bottom: 15px; }
+        label { font-weight: bold; }
+    </style>
+</head>
+<body>
 
+    <h1>Music Survey</h1>
+
+    <!-- Sunucu bağlantısını sağlayan ana form etiketi -->
+    <form method="post" action="http://www.uyar.com/teaching/ecc006/2017spring/login.php">
+        
+        <!-- İsim kutusu (Text box) -->
+        <div class="row">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="my_name">
+        </div>
+
+        <!-- E-posta kutusu (Email address input) -->
+        <div class="row">
+            <label for="email">E-Mail:</label><br>
+            <input type="email" id="email" name="my_email">
+        </div>
+
+        <!-- Checkbox grubu (Fieldset ve Legend kullanıldı) -->
+        <fieldset>
+            <legend>Select Your Favorite Types of Music:</legend>
+            <input type="checkbox" name="m1" id="c1"> <label for="c1">Pop</label><br>
+            <input type="checkbox" name="m2" id="c2"> <label for="c2">Classical</label><br>
+            <input type="checkbox" name="m3" id="c3"> <label for="c3">Rock</label><br>
+            <input type="checkbox" name="m4" id="c4"> <label for="c4">Other</label>
+        </fieldset>
+
+        <!-- Radio button grubu (En az 3 seçenek) -->
+        <fieldset>
+            <legend>Select how often you purchase Music CDs:</legend>
+            <input type="radio" name="p" id="r1" value="w"> <label for="r1">Weekly</label><br>
+            <input type="radio" name="p" id="r2" value="m"> <label for="r2">Monthly</label><br>
+            <input type="radio" name="p" id="r3" value="n"> <label for="r3">Never purchase</label>
+        </fieldset>
+
+        <!-- Select box (3 tanesi görünüyor, içinde 4 seçenek var) -->
+        <div class="row">
+            <label for="loc">Select the locations you listen to Music:</label><br>
+            <select name="location" id="loc" size="3">
+                <option value="1">In the car</option>
+                <option value="2">Anywhere (MP3 Player)</option>
+                <option value="3">At work</option>
+                <option value="4">At home</option>
+            </select>
+        </div>
+
+        <!-- Metin kutusu (60 karakter genişlik, 3 satır yükseklik) -->
+        <div class="row">
+            <label for="comm">What role does music play in your life?</label><br>
+            <textarea id="comm" name="comments" rows="3" cols="60"></textarea>
+        </div>
+
+        <!-- Gönder ve Sıfırla butonları -->
+        <div class="row">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+
+    </form>
+
+</body>
+</html>
