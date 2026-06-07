@@ -1,1 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homework #10 - E-Commerce Survey</title>
 
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f5f7fa;
+    color:#333;
+}
+
+header{
+    background:#4a90e2;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+.section{
+    background:white;
+    padding:20px;
+    margin-top:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stats{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+}
+
+.card{
+    width:200px;
+    background:#eef6ff;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+.card h3{
+    margin:10px 0;
+    color:#2c6db8;
+}
+
+.card p{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.bar{
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:15px;
+}
+
+.fill{
+    background:#4a90e2;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+.site-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.site{
+    background:#eef6ff;
+    padding:10px 15px;
+    border-radius:20px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+    background:#4a90e2;
+    color:white;
+}
+
+footer a{
+    color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>E-Commerce Survey Results</h1>
+    <p>Survey Conducted with 20 Participants</p>
+</header>
+
+<div class="container">
+
+<div class="section">
+<h2>Overview</h2>
+
+<p>
+This survey was conducted to understand online shopping habits among different age groups and educational backgrounds. Twenty participants answered questions related to their online shopping behavior.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>Shopping Activity</h2>
+
+<div class="stats">
+
+<div class="card">
+<h3>🛒 Purchased Online</h3>
+<p>18</p>
+</div>
+
+<div class="card">
+<h3>👀 Browsed Only</h3>
+<p>2</p>
+</div>
+
+<div class="card">
+<h3>📅 Monthly Buyers</h3>
+<p>10</p>
+</div>
+
+<div class="card">
+<h3>🔥 Weekly Buyers</h3>
+<p>5</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Age Distribution</h2>
+
+<p>18-25 Years</p>
+<div class="bar">
+<div class="fill" style="width:55%;">11 People</div>
+</div>
+
+<p>26-39 Years</p>
+<div class="bar">
+<div class="fill" style="width:30%;">6 People</div>
+</div>
+
+<p>40-50 Years</p>
+<div class="bar">
+<div class="fill" style="width:10%;">2 People</div>
+</div>
+
+<p>Over 50</p>
+<div class="bar">
+<div class="fill" style="width:5%;">1 Person</div>
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Gender Distribution</h2>
+
+<ul>
+<li>👨 Male: 12</li>
+<li>👩 Female: 8</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>Education Level</h2>
+
+<ul>
+<li>High School: 4</li>
+<li>Some College: 7</li>
+<li>College Graduate: 6</li>
+<li>Graduate School: 3</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>Favorite Shopping Websites</h2>
+
+<div class="site-list">
+<div class="site">Amazon (8)</div>
+<div class="site">Trendyol (6)</div>
+<div class="site">Hepsiburada (4)</div>
+<div class="site">AliExpress (2)</div>
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Discussion and Conclusions</h2>
+
+<p>
+The survey results show that online shopping has become a common activity among internet users. Most participants reported making purchases online, while only a small number said they browse products without buying.
+</p>
+
+<p>
+The 18–25 age group represented the largest portion of online shoppers. Monthly shopping was the most common habit among participants. Amazon and Trendyol were identified as the most popular shopping websites.
+</p>
+
+<p>
+Research from Pew Research Center and eMarketer shows that online shopping continues to grow worldwide. Increased internet access, mobile shopping, and secure payment systems contribute to this growth. The survey findings are consistent with these trends.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>References</h2>
+
+<ul>
+<li>Pew Research Center</li>
+<li>eMarketer</li>
+<li>ClickZ</li>
+<li>E-Commerce Times</li>
+</ul>
+
+</div>
+
+</div>
+
+<footer>
+<p>
+Prepared by Umut Çalışkan |
+<a href="mailto:seninmailin@gmail.com">Email Me</a>
+</p>
+</footer>
+
+</body>
+</html>
